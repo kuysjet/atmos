@@ -64,8 +64,7 @@ session_start();
           <a class="nav-link dropdown-toggle align-center" href="#" id="userDropdown" role="button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="d-none d-lg-inline text-gray-600 small">Alexander Pierce</span>
-              <img class="img-profile rounded-circle"
-                  src="img/undraw_profile.svg">
+              <img class="img-profile rounded-circle" src="dist/img/user2-160x160.jpg" width="20" height="20">
           </a>
           <!-- Dropdown - User Information -->
           <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

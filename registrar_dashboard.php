@@ -66,8 +66,7 @@ session_start();
           <a class="nav-link dropdown-toggle align-center" href="#" id="userDropdown" role="button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="d-none d-lg-inline text-gray-600 small">Registrar</span>
-              <img class="img-profile rounded-circle"
-                  src="img/undraw_profile.svg">
+              <img class="img-profile rounded-circle" src="dist/img/user3-128x128.jpg" width="20" height="20">
           </a>
           <!-- Dropdown - User Information -->
           <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -99,8 +98,8 @@ session_start();
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="#" alt="ACLC Logo" class="brand-image img-circle elevation-3">
+    <a href="#" class="brand-link">
+      <img src="dist/img/amalogo.png" alt="ACLC Logo" class="brand-image img-circle elevation-3">
       <span class="brand-text font-weight-light">ACLC College Iriga</span>
     </a>
 

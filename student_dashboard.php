@@ -29,6 +29,29 @@ session_start();
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+
+  <style>
+  .custom-card {
+    background-color: #f8f9fa; /* Lighter background color */
+    color: #212529; /* Adjust text color if needed */
+    border-style: solid;
+  }
+
+  .custom-card .form-label {
+    font-weight: 500; /* Increased font weight for labels */
+  }
+
+  .custom-card .card-text {
+    font-weight: 500; /* Increased font weight for text */
+    font-size: 1.1rem; /* Slightly larger text size */
+    color: darkslategrey;
+  }
+
+  .card-header {
+    background-color: lightgrey;
+  }
+</style>
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -40,56 +63,45 @@ session_start();
 
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-dark navbar-light">
-    <!-- Left navbar links -->
-    <div class="container-fluid"> <!-- Added container-fluid for full width -->
-    <ul class="navbar-nav">
-      <li class="nav-item d-none d-sm-inline-block">
-        <span class="nav-link">Attendance Monitoring System using QR Code</span>
-      </li>
-    </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <!-- Navbar Brand -->
+    <a class="navbar-brand" href="#">Student Digital ID</a>
 
-    <!-- navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-      <li class="nav-item dropdown no-arrow">
-          <a class="nav-link dropdown-toggle align-center" href="#" id="userDropdown" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="d-none d-lg-inline text-gray-600 small">Alexander Pierce</span>
-              <img class="img-profile rounded-circle"
-                  src="img/undraw_profile.svg">
+    <!-- Toggler for Mobile -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+        <!-- Download Icon -->
+        <li class="nav-item">
+          <a class="nav-link" href="#" role="button">
+            <i class="fas fa-download"></i> Download
           </a>
-          <!-- Dropdown - User Information -->
-          <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-              aria-labelledby="userDropdown">
-              <a class="dropdown-item" href="#">
-                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Profile
-              </a>
-              <a class="dropdown-item" href="#">
-                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Settings
-              </a>
-              <a class="dropdown-item" href="#">
-                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Activity Log
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
-                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Logout
-              </a>
+        </li>
+        <!-- User Dropdown -->
+        <li class="nav-item dropdown no-arrow">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="d-none d-lg-inline text-gray-600 small">Alexander Pierce</span>
+            <img class="img-profile rounded-circle" src="dist/img/user8-128x128.jpg" width="20" height="20">
+          </a>
+          <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+            <!-- Dropdown items -->
+            <a class="dropdown-item" href="#">Profile</a>
+            <a class="dropdown-item" href="#">Settings</a>
+            <a class="dropdown-item" href="#">Activity Log</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
           </div>
-      </li>
-    </ul>
-    
-  </nav>
-  <!-- /.navbar -->
-
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- /.navbar -->
 
 
 
@@ -98,26 +110,71 @@ session_start();
               
 
 
-  <div class="container my-5">
+<!-- card -->
+<div class="container my-5">
   <div class="row justify-content-center">
-    <div class="col-sm-8 col-md-6 col-lg-4"> <!-- Adjusted column sizes -->
-      <div class="card" style="width: 18rem;"> <!-- Adjusted card width -->
-        <div class="card-body">
-          <div class="text-center">
-            <img src="dist/img/user8-128x128.jpg" alt="Profile Picture" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px;"> <!-- Increased image size -->
-            <h2 class="h5 card-title">John Doe</h2>
-            <p class="card-text">Student ID: 123456</p>
-            <p class="card-text">Department: Computer Science</p>
-            <p class="card-text">Year: Sophomore</p>
+    <div class="col-md-8 col-lg-6">
+      <div class="card custom-card">
+        <div class="card-header text-center">
+          <img src="dist/img/user8-128x128.jpg" alt="Profile Picture" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
           </div>
+        <div class="card-body text-center">
+          <div class="row mb-1">
+            <div class="col-6 text-center">
+              <label class="form-label"><small><b>Name</b></small></label>
+            </div>
+            <div class="col-6 text-left">
+              <p class="card-text">John Doe</p>
+            </div>
+          </div>
+
+          <div class="row mb-1">
+            <div class="col-6 text-center">
+              <label class="form-label"><small><b>USN</b></small></label>
+            </div>
+            <div class="col-6 text-left">
+              <p class="card-text">20002849500</p>
+            </div>
+          </div>
+
+          <div class="row mb-1">
+            <div class="col-6 text-center">
+              <label class="form-label"><small><b>Course</b></small></label>
+            </div>
+            <div class="col-6 text-left">
+              <p class="card-text">Bachelor of Science in Computer Science 4</p>
+            </div>
+          </div>
+
+          <!-- <div class="row mb-1">
+            <div class="col-6 text-center">
+              <label class="form-label"><small><b>Address</b></small></label>
+            </div>
+            <div class="col-6 text-left">
+              <p class="card-text">San Miguel, Iriga City</p>
+            </div>
+          </div>
+
+          <div class="row mb-1">
+            <div class="col-6 text-center">
+              <label class="form-label"><small><b>Contact Number</b></small></label>
+            </div>
+            <div class="col-6 text-left">
+              <p class="card-text">09171234567</p>
+            </div>
+          </div> -->
         </div>
         <div class="card-footer text-center">
-          <img src="dist/img/qrcode.png" alt="QR Code" class="img-fluid" style="width: 150px; height: 150px;"> <!-- Increased QR code size -->
+          <img src="dist/img/qrcode.png" alt="QR Code" class="img-fluid" style="width: 200px; height: 200px;">
         </div>
       </div>
     </div>
   </div>
 </div>
+<!-- /card -->
+
+
+
 
 <!-- Logout Modal-->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
