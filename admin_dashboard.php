@@ -422,16 +422,16 @@ session_start();
     //-------------
     var barChartCanvas = $('#barChart').get(0).getContext('2d')
     var barChartData = {
-      labels  : ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      labels  : ['BSCS', 'BSentrep', 'BSAIS', 'ACT', 'ABM', 'HUMSS', 'GAS'],
       datasets: [
         {
-          label               : 'Digital Goods',
+          label               : 'Attendees',
           backgroundColor     : 'rgba(60,141,188,0.9)',
           borderColor         : 'rgba(60,141,188,0.8)',
           data                : [28, 48, 40, 19, 86, 27, 90]
         },
         {
-          label               : 'Electronics',
+          label               : 'Non Attenders',
           backgroundColor     : 'rgba(210, 214, 222, 1)',
           borderColor         : 'rgba(210, 214, 222, 1)',
           data                : [65, 59, 80, 81, 56, 55, 40]
