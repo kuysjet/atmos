@@ -31,25 +31,16 @@ session_start();
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
 
   <style>
+
+
   .custom-card {
-    background-color: #f8f9fa; /* Lighter background color */
-    color: #212529; /* Adjust text color if needed */
-    border-style: solid;
-  }
-
-  .custom-card .form-label {
-    font-weight: 500; /* Increased font weight for labels */
-  }
-
-  .custom-card .card-text {
-    font-weight: 500; /* Increased font weight for text */
-    font-size: 1.1rem; /* Slightly larger text size */
-    color: darkslategrey;
-  }
-
-  .card-header {
-    background-color: lightgrey;
-  }
+      background-image: url('dist/img/idCARD.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white; /* Set text color to contrast with the background */
+      min-height: auto; /* Set a minimum height for the card */
+    }
 </style>
 
 </head>
@@ -76,16 +67,6 @@ session_start();
     <!-- Navbar Links -->
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="dist/img/amalogo.png" download="YourID.png">
-            <i class="fas fa-download"></i> Download Image
-          </a>
-        </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
       <li class="nav-item dropdown no-arrow">
           <a class="nav-link dropdown-toggle align-center" href="#" id="userDropdown" role="button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -99,13 +80,10 @@ session_start();
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
               </a>
-              <a class="dropdown-item" href="#">
-                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Settings
-              </a>
-              <a class="dropdown-item" href="#">
-                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Activity Log
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="dist/img/amalogo.png" download="YourID.png">
+                  <i class="fas fa-download fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Download
               </a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
@@ -127,70 +105,26 @@ session_start();
               
 
 
-<!-- card -->
+
+
 <div class="container my-5">
   <div class="row justify-content-center">
     <div class="col-md-8 col-lg-6">
       <div class="card custom-card">
-        <div class="card-header text-center">
+        <div class="card-header text-center mt-5">
           <img src="dist/img/user8-128x128.jpg" alt="Profile Picture" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
-          </div>
-        <div class="card-body text-center">
-          <div class="row mb-1">
-            <div class="col-6 text-center">
-              <label class="form-label"><small><b>Name</b></small></label>
-            </div>
-            <div class="col-6 text-left">
-              <p class="card-text">John Doe</p>
-            </div>
-          </div>
-
-          <div class="row mb-1">
-            <div class="col-6 text-center">
-              <label class="form-label"><small><b>USN</b></small></label>
-            </div>
-            <div class="col-6 text-left">
-              <p class="card-text">20002849500</p>
-            </div>
-          </div>
-
-          <div class="row mb-1">
-            <div class="col-6 text-center">
-              <label class="form-label"><small><b>Course</b></small></label>
-            </div>
-            <div class="col-6 text-left">
-              <p class="card-text">Bachelor of Science in Computer Science 4</p>
-            </div>
-          </div>
-
-          <!-- <div class="row mb-1">
-            <div class="col-6 text-center">
-              <label class="form-label"><small><b>Address</b></small></label>
-            </div>
-            <div class="col-6 text-left">
-              <p class="card-text">San Miguel, Iriga City</p>
-            </div>
-          </div>
-
-          <div class="row mb-1">
-            <div class="col-6 text-center">
-              <label class="form-label"><small><b>Contact Number</b></small></label>
-            </div>
-            <div class="col-6 text-left">
-              <p class="card-text">09171234567</p>
-            </div>
-          </div> -->
         </div>
-        <div class="card-footer text-center">
-          <img src="dist/img/qrcode.png" alt="QR Code" class="img-fluid" style="width: 200px; height: 200px;">
+        <div class="card-body text-center">
+          <h1 class="card-text">John Doe</h1>
+          <h4 class="card-text">BSCS 4</h4>
+        </div>
+        <div class="card-footer text-center mb-5">
+          <img src="dist/img/qrcode.png" alt="QR Code" width="250px" height="250px" >
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- /card -->
-
-
 
 
 <!-- Logout Modal-->
@@ -212,6 +146,13 @@ session_start();
             </div>
         </div>
     </div>
+
+
+
+  <footer class="main-footer text-center">
+    <small><strong>Copyright &copy; 2023 atmos </strong></small>
+  </footer>
+
 
 
 <!-- jQuery -->

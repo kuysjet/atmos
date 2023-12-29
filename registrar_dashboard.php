@@ -76,10 +76,6 @@ session_start();
                   Profile
               </a>
               <a class="dropdown-item" href="#">
-                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Settings
-              </a>
-              <a class="dropdown-item" href="#">
                   <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                   Activity Log
               </a>
@@ -132,7 +128,7 @@ session_start();
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-layer-group"></i>
                 <p>
-                  Reports
+                  Attendance Reports
                 </p>
               </a>
             </li>
@@ -224,7 +220,7 @@ session_start();
         </div>
     </div>
 
-  <footer class="main-footer">
+  <footer class="main-footer small">
     <strong>Copyright &copy; 2023 atmos </strong>
     All rights reserved.
   </footer>

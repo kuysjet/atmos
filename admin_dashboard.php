@@ -74,10 +74,6 @@ session_start();
                   Profile
               </a>
               <a class="dropdown-item" href="#">
-                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Settings
-              </a>
-              <a class="dropdown-item" href="#">
                   <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                   Activity Log
               </a>
@@ -170,7 +166,7 @@ session_start();
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-layer-group"></i>
                 <p>
-                  Reports
+                  Attendance Reports
                 </p>
               </a>
             </li>
@@ -341,7 +337,7 @@ session_start();
    
     <!-- /.content -->
   <!-- /.content-wrapper -->
-  <footer class="main-footer small"><strong>Copyright &copy; atmos 2023</strong>All rights reserved.</footer>
+  <footer class="main-footer small"><strong>Copyright &copy; atmos 2023</strong> All rights reserved.</footer>
   
 </div>
 <!-- ./wrapper -->
@@ -431,7 +427,7 @@ session_start();
           data                : [28, 48, 40, 19, 86, 27, 90]
         },
         {
-          label               : 'Non Attenders',
+          label               : 'Total Students',
           backgroundColor     : 'rgba(210, 214, 222, 1)',
           borderColor         : 'rgba(210, 214, 222, 1)',
           data                : [65, 59, 80, 81, 56, 55, 40]
