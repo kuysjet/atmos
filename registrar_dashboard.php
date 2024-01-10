@@ -29,7 +29,7 @@ session_start();
   </div>
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-dark navbar-light">
+  <nav class="main-header navbar navbar-expand navbar-light bg-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -53,7 +53,7 @@ session_start();
       <li class="nav-item dropdown no-arrow">
           <a class="nav-link dropdown-toggle align-center" href="#" id="userDropdown" role="button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="d-none d-lg-inline text-gray-600 small">Registrar</span>
+              <span class="d-none d-lg-inline text-gray-600 small">CK Daet</span>
               <img class="img-profile rounded-circle" src="dist/img/user3-128x128.jpg" width="20" height="20">
           </a>
           <!-- Dropdown - User Information -->
@@ -95,7 +95,7 @@ session_start();
           <img src="dist/img/user3-128x128.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Registrar</a>
+          <a href="registrar_profile.php" class="d-block">CK Daet</a>
         </div>
       </div>
 
@@ -105,7 +105,7 @@ session_start();
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="registrar_dashboard.php" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -113,7 +113,7 @@ session_start();
             </a>
           </li>
           <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="registrar_attendance_records.php" class="nav-link">
                 <i class="nav-icon fas fa-layer-group"></i>
                 <p>
                   Attendance Reports
@@ -161,22 +161,6 @@ session_start();
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>6</h3>
-
-                <p>Finished Events</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-th-list"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
         </div>
         <!-- /.row -->    
           <!-- right col -->

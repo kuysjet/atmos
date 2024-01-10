@@ -95,7 +95,7 @@ session_start();
                 <div class="text-center">
                   <img src="dist/img/amalogo.png"
                     style="width: 100px;" alt="logo">
-                  <h4 class="mt-1 mb-5 pb-1">We are the ATMOS Team</h4>
+                  <h4 class="mt-1 mb-5 pb-1"></h4>
                 </div>
 
                 <form action="code.php" method="POST">
