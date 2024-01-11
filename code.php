@@ -14,7 +14,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_num_rows($result) > 0) {
         $user = mysqli_fetch_assoc($result);
-        
 
         if ($password == $user['password']) {
             // Get user role
@@ -36,11 +35,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     break;
             }
         } else {
-            echo "<script>alert('Invalid password.'); window.location.href='login.php';</script>";
-
+            // Redirect to login page with error parameter
+            header('Location: login.php?error=invalid_password');
         }
     } else {
-        echo "<script>alert('User not found.'); window.location.href='login.php';</script>";
+        // Redirect to login page with error parameter
+        header('Location: login.php?error=user_not_found');
     }
 }
 ?>
