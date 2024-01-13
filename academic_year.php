@@ -2,18 +2,7 @@
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
-
-        <<<<<<< HEAD <!-- Preloader -->
-            <div class="preloader flex-column justify-content-center align-items-center">
-                <img class="animation__shake" src="dist/img/amalogo.png" alt="ACLC LOGO" height="130" width="100">
-            </div>
-            =======
-            <!-- Preloader -->
-            <!-- <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="dist/img/amalogo.png" alt="ACLC LOGO" height="130" width="100">
-  </div> -->
-            >>>>>>> 1dd75f858240911e9b26eb0abbcf4b6369e3e506
-
+        
             <?php include "includes/navbar-sidebar.php" ?>
 
             <!-- Content Wrapper. Contains page content -->
