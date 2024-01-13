@@ -21,18 +21,36 @@ session_start();
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <style>
 .animate {
-  background-image: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
--webkit-animation: hue 12s infinite linear;
-}@-webkit-keyframes hue {
- from {
-   -webkit-filter: hue-rotate(0deg);
- }
- to {
-   -webkit-filter: hue-rotate(-360deg);
- }
+  background-image: linear-gradient(125deg, #f2291b, #f7db25, #84f527);
+  background-clip: text;
+  color: transparent;
+  animation: hue 12s infinite linear;
 }
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(-360deg);
+  }
+}
+
+/* Browser-specific prefixes */
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+/* Fallback for browsers that don't support background-clip and hue-rotate */
+.animate-fallback {
+  color: #f7db25; /* Fallback color */
+}
+
 
 
 
@@ -171,12 +189,12 @@ session_start();
               <div class="inner">
                 <h3>1</h3>
 
-                <p>On-Going Events</p>
+                <p>Acquaintance Party</p>
               </div>
               <div class="icon">
                 <i class="fas fa-th-list"></i>
               </div>
-              <a href="registrar_scanner.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="registrar_scanner.php" class="small-box-footer">Scan <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
         </div>

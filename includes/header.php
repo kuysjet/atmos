@@ -27,19 +27,38 @@ session_start();
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
+    /* gradient */
 .animate {
-  background-image: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
--webkit-animation: hue 12s infinite linear;
-}@-webkit-keyframes hue {
- from {
-   -webkit-filter: hue-rotate(0deg);
- }
- to {
-   -webkit-filter: hue-rotate(-360deg);
- }
+  background-image: linear-gradient(125deg, #f2291b, #f7db25, #84f527);
+  background-clip: text;
+  color: transparent;
+  animation: hue 12s infinite linear;
 }
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(-360deg);
+  }
+}
+
+/* Browser-specific prefixes */
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+/* Fallback for browsers that don't support background-clip and hue-rotate */
+.animate-fallback {
+  color: #f7db25; /* Fallback color */
+}
+
 
 /* for add event modal */
     .scrollable-menu {
