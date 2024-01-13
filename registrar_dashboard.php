@@ -185,16 +185,16 @@ session_start();
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div class="small-box bg-primary">
               <div class="inner">
-                <h3>1</h3>
+                <h3>+</h3>
 
-                <p>Acquaintance Party</p>
+                <h5>Acquaintance Party</h5>
               </div>
               <div class="icon">
                 <i class="fas fa-th-list"></i>
               </div>
-              <a href="registrar_scanner.php" class="small-box-footer">Scan <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="registrar_scanner.php" class="small-box-footer">Scan QR <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
         </div>
