@@ -3,139 +3,140 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
 
-<<<<<<< HEAD
-        <!-- Preloader -->
-        <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="dist/img/amalogo.png" alt="ACLC LOGO" height="130" width="100">
-        </div>
-=======
-  <!-- Preloader -->
-  <!-- <div class="preloader flex-column justify-content-center align-items-center">
+        <<<<<<< HEAD <!-- Preloader -->
+            <div class="preloader flex-column justify-content-center align-items-center">
+                <img class="animation__shake" src="dist/img/amalogo.png" alt="ACLC LOGO" height="130" width="100">
+            </div>
+            =======
+            <!-- Preloader -->
+            <!-- <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="dist/img/amalogo.png" alt="ACLC LOGO" height="130" width="100">
   </div> -->
->>>>>>> 1dd75f858240911e9b26eb0abbcf4b6369e3e506
+            >>>>>>> 1dd75f858240911e9b26eb0abbcf4b6369e3e506
 
-        <?php include "includes/navbar-sidebar.php" ?>
+            <?php include "includes/navbar-sidebar.php" ?>
 
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
 
 
-            <div class="main p-3">
-                <div id="content" class="container">
-                    <!-- Your page content goes here -->
-                    <h2>Academic Year</h2>
+                <div class="main p-3">
+                    <div id="content" class="container">
+                        <!-- Your page content goes here -->
+                        <h2>Academic Year</h2>
 
-                    <div class="card header card-outline card-primary m-0 p-3">
-                        <!-- Add button with icon -->
-                        <div class="d-flex justify-content-end mb-0 ">
-                            <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                                data-bs-target="#addModal">
-                                <i class="fas fa-plus"></i> Add Academic Year
-                            </button>
+                        <div class="card header card-outline card-primary m-0 p-3">
+                            <!-- Add button with icon -->
+                            <div class="d-flex justify-content-end mb-0 ">
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#addModal">
+                                    <i class="fas fa-plus"></i> Add Academic Year
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card body p-3">
-                        <div class="table-responsive">
-                            <table id="academicTable" class="table table-hover table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Academic Year</th>
-                                        <th>Status</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php include 'database/dbconfig.php';
-                                    $no                 = 1;
-                                    $fetch_academicyear = mysqli_query($conn, "SELECT id, year FROM academic_year");
-                                    while ($getrow = mysqli_fetch_assoc($fetch_academicyear)) { ?>
+                        <div class="card body p-3">
+                            <div class="table-responsive">
+                                <table id="academicTable" class="table table-hover table-bordered">
+                                    <thead>
                                         <tr>
-                                            <td>
-                                                <?= $no ?>
-                                            </td>
-                                            <td>
-                                                <?= $getrow['year'] ?>
-                                            </td>
-                                            <td>
-                                                <?php if ($getrow['status'] == 0) {
-                                                    echo "<button type='button' class='border-0 bg-transparent' data-bs-toggle='modal'
+                                            <th>#</th>
+                                            <th>Academic Year</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php include 'database/dbconfig.php';
+                                        $no                 = 1;
+                                        $fetch_academicyear = mysqli_query($conn, "SELECT id, year, status FROM academic_year");
+                                        while ($getrow = mysqli_fetch_assoc($fetch_academicyear)) { ?>
+                                            <tr>
+                                                <td>
+                                                    <?= $no ?>
+                                                </td>
+                                                <td>
+                                                    <?= $getrow['year'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php if ($getrow['status'] == 0) {
+                                                        echo "<button type='button' class='border-0 bg-transparent' data-bs-toggle='modal'
                                                     data-bs-target='#confirmChangeStatus" . $getrow['status'] . "'>
                                                     <span class='badge bg-danger'>
                                                         Pending
                                                     </span>
                                                     </button>";
-                                                } elseif ($getrow['status'] == 1) {
-                                                    echo "<button type='button' class='border-0 bg-transparent' data-bs-toggle='modal'
+                                                    } elseif ($getrow['status'] == 1) {
+                                                        echo "<button type='button' class='border-0 bg-transparent' data-bs-toggle='modal'
                                                     data-bs-target='#confirmChangeStatus" . $getrow['status'] . "'>
                                                     <span class='badge bg-primary'>
                                                         Active
                                                     </span>
                                                     </button>";
-                                                }
-                                                ?>
+                                                    }
+                                                    ?>
 
-                                                <div class="modal fade" id="confirmChangeStatus<?= $getrow['status'] ?>"
-                                                    data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                                                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <form action="academic_year-status.php" method="post">
-                                                                <div class="modal-header">
-                                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                                                                        Confirm Changes
-                                                                    </h1>
-                                                                    <input type="hidden" name="academicStatus"
-                                                                        value="<?= $getrow['status'] ?>">
-                                                                    <input type="hidden" name="primaryId"
-                                                                        value="<?= $getrow['id'] ?>">
-                                                                    <button type="button" class="btn-close"
-                                                                        data-bs-dismiss="modal" aria-label="Close"></button>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <div class="fs-4">Are you sure to change the status?
+                                                    <div class="modal fade" id="confirmChangeStatus<?= $getrow['status'] ?>"
+                                                        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                                                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <form action="academic_year-status.php" method="post">
+                                                                    <div class="modal-header">
+                                                                        <h1 class="modal-title fs-5"
+                                                                            id="staticBackdropLabel">
+                                                                            Confirm Changes
+                                                                        </h1>
+                                                                        <input type="hidden" name="academicStatus"
+                                                                            value="<?= ($getrow['status'] == 0) ? 1 : 0 ?>">
+                                                                        <input type="hidden" name="primaryId"
+                                                                            value="<?= $getrow['id'] ?>">
+                                                                        <button type="button" class="btn-close"
+                                                                            data-bs-dismiss="modal"
+                                                                            aria-label="Close"></button>
                                                                     </div>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-secondary"
-                                                                        data-bs-dismiss="modal">CANCEL</button>
-                                                                    <button type="submit"
-                                                                        class="btn btn-primary">CONFIRM</button>
-                                                                </div>
-                                                            </form>
+                                                                    <div class="modal-body">
+                                                                        <div class="fs-4">Are you sure to change the status?
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary"
+                                                                            data-bs-dismiss="modal">CANCEL</button>
+                                                                        <button type="submit"
+                                                                            class="btn btn-primary">CONFIRM</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
 
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
-                                                    data-bs-target="#editModal">
-                                                    <i class="fas fa-pencil-alt"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                                    data-bs-target="#deleteModal">
-                                                    <i class="fas fa-trash"></i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    <?php } ?>
-                                    <!-- Add more rows as needed -->
-                                </tbody>
-                            </table>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-warning btn-sm"
+                                                        data-bs-toggle="modal" data-bs-target="#editModal">
+                                                        <i class="fas fa-pencil-alt"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-danger btn-sm"
+                                                        data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
+                                        <!-- Add more rows as needed -->
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- /.content-wrapper -->
+            <!-- /.content-wrapper -->
 
-        <!-- Footer -->
-        <footer class="main-footer small">
-            <strong>Copyright &copy; atmos 2023</strong> All rights reserved.
-        </footer>
-        <!-- /.Footer -->
+            <!-- Footer -->
+            <footer class="main-footer small">
+                <strong>Copyright &copy; atmos 2023</strong> All rights reserved.
+            </footer>
+            <!-- /.Footer -->
     </div>
     <!-- ./wrapper -->
 
