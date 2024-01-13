@@ -203,7 +203,8 @@
                     <!-- Add your form or input fields for adding academic year here -->
                     <form action="academic_year-add.php" method="post">
                         <!-- Example input field -->
-                        <select class="form-select mb-3" name="academicYear" aria-label="Default select example">
+                        <select id="academicYearSelect" class="form-select mb-3" name="academicYear"
+                            aria-label="Default select example">
                             <option selected disabled>Choose Academic Year</option>
                             <?php $currentYear = date("Y", strtotime('-1 year'));
                             $nextYear    = date("Y");
@@ -218,7 +219,8 @@
                         <!-- Add more input fields as needed -->
 
                         <!-- Add submit button -->
-                        <button type="submit" class="btn btn-primary">Add Academic Year</button>
+                        <button id="submitButton" type="submit" class="btn btn-primary" disabled>Add Academic
+                            Year</button>
                     </form>
                 </div>
             </div>
@@ -268,6 +270,12 @@
         window.location.href = 'academic_year-del.php?del=' + delid + '';
         return true;
     }
+
+    // Add an event listener to the select element
+    document.getElementById('academicYearSelect').addEventListener('change', function () {
+        // Enable the submit button when a valid option is selected
+        document.getElementById('submitButton').disabled = this.value === 'Choose Academic Year';
+    });
 </script>
 
 </html>
