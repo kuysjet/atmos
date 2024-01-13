@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 13, 2024 at 09:07 AM
+-- Generation Time: Dec 29, 2023 at 12:32 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -30,7 +30,6 @@ SET time_zone = "+00:00";
 CREATE TABLE `academic_year` (
   `id` int(11) NOT NULL,
   `year` varchar(50) NOT NULL,
-  `status` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -39,9 +38,8 @@ CREATE TABLE `academic_year` (
 -- Dumping data for table `academic_year`
 --
 
-INSERT INTO `academic_year` (`id`, `year`, `status`, `created_at`, `updated_at`) VALUES
-(1, '2023-2024', 0, '2023-11-25 05:07:14', NULL),
-(2, '2024-2025', 0, '2024-01-13 06:30:13', NULL);
+INSERT INTO `academic_year` (`id`, `year`, `created_at`, `updated_at`) VALUES
+(1, '2023-2024', '2023-11-25 05:07:14', NULL);
 
 -- --------------------------------------------------------
 
@@ -245,8 +243,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `usn`, `password`, `user_type_id`, `created_at`) VALUES
-(1, 'Student_Username', 'Student_Password', 1, '2023-11-25 13:46:16'),
-(2, 'SCO_Officer', 'SCO_Password', 2, '2023-11-25 13:46:16'),
+(1, '20002849500', 'student1', 1, '2023-11-25 13:46:16'),
+(2, 'registrar', 'registrar123', 2, '2023-11-25 13:46:16'),
 (3, 'admin', 'admin123', 3, '2023-11-25 13:46:16');
 
 -- --------------------------------------------------------
@@ -363,7 +361,7 @@ ALTER TABLE `user_types`
 -- AUTO_INCREMENT for table `academic_year`
 --
 ALTER TABLE `academic_year`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `admins`
