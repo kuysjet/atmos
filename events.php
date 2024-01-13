@@ -4,9 +4,9 @@
 <div class="wrapper">
 
   <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
+  <!-- <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="dist/img/amalogo.png" alt="ACLC LOGO" height="130" width="100">
-  </div>
+  </div> -->
 
   <?php include "includes/navbar-sidebar.php" ?>
 
@@ -46,13 +46,13 @@
               <tbody>
                   <tr>
                       <td>1</td>
-                      <td>2022-2023</td>
+                      <td>2023-2024</td>
                       <td>Annual Gala</td>
                       <td>Convention Center</td>
-                      <td>12-15-2023 08:00 am</td>
+                      <td>12-15-2023 09:00 am</td>
                       <td>12-15-2023 05:00:pm</td>
                       <td class="d-none">A night of celebration and joy</td>
-                      <td><span class="badge bg-success">Done</span></td>
+                      <td><span class="badge bg-primary">On-Going</span></td>
                       <td>
                           <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#viewEventModal">
                               <i class="far fa-eye"></i>
@@ -77,7 +77,7 @@
 
   <!-- Footer -->
   <footer class="main-footer small">
-    <strong>Copyright &copy; atmos 2023</strong> All rights reserved.
+    <strong> &copy; atmos 2023</strong> All rights reserved.
   </footer>
   <!-- /.Footer -->
 </div>
@@ -138,7 +138,6 @@
                         <label for="academicYear" class="form-label">Academic Year</label>
                         <select class="form-select" id="academicYear">
                             <option selected disabled>Select Academic Year</option>
-                            <option value="2022-2023">2022-2023</option>
                             <option value="2023-2024">2023-2024</option>
                             <!-- Add more academic years as needed -->
                         </select>
@@ -183,26 +182,26 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="Officer1" id="officer1Checkbox">
                                     <label class="form-check-label" for="officer1Checkbox">
-                                        John Doe
+                                        James Smith
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="Officer2" id="officer2Checkbox">
                                     <label class="form-check-label" for="officer2Checkbox">
-                                        James Smith
+                                        Officer One
                                     </label>
                                 </div>
                                 <!-- Add more officers as needed -->
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="Officer1" id="officer1Checkbox">
                                     <label class="form-check-label" for="officer1Checkbox">
-                                        CK Daet
+                                        Officer Two
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="Officer2" id="officer2Checkbox">
                                     <label class="form-check-label" for="officer2Checkbox">
-                                        Ronnie Rodillas
+                                        Officer Three
                                     </label>
                                 </div>
                                 <!-- Add more checkboxes for officers as needed -->
@@ -232,40 +231,52 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-4 border-end">
-                            <div class="mb-3">
-                                <label class="form-label">Academic Year:</label>
-                                <span class="d-block">2023-2024</span>
+                <form>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Academic Year:</label>
+                                    <span class="d-block">2023-2024</span>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Event Name:</label>
+                                    <span class="d-block">Annual Gala</span>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Event Venue:</label>
+                                    <span class="d-block">Convention Center</span>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Start Date & Time:</label>
+                                    <span class="d-block">01-14-2024 09:00 am</span>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">End Date & Time:</label>
+                                    <span class="d-block">01-14-2024 05:00 pm</span>
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label class="form-label">Event Name:</label>
-                                <span class="d-block">Annual Gala</span>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Event Venue:</label>
-                                <span class="d-block">Convention Center</span>
-                            </div>
-                        </div>
-                        <div class="col-md-4 border-end">
-                            <div class="mb-3">
-                                <label class="form-label">Start Date & Time:</label>
-                                <span class="d-block">12-15-2023 08:00 am</span>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">End Date & Time:</label>
-                                <span class="d-block">12-15-2023 05:00 pm</span>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-3">
-                                <label class="form-label">Description:</label>
-                                <span class="d-block">A night of celebration and joy</span>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Description:</label>
+                                    <span class="d-block">A night of celebration and joy</span>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Assigned Officers:</label>
+                                    <ul>
+                                        <li>James Smith</li>
+                                        <li>Officer One</li>
+                                        <!-- Add more officers as needed -->
+                                        <li>Officer Two</li>
+                                        <li>Officer Three</li>
+                                        <!-- ... -->
+                                        <!-- Add more officers as needed -->
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -301,12 +312,12 @@
 
                     <div class="mb-3 col-md-6">
                         <label for="editStartDate" class="form-label">Start Date & Time</label>
-                        <input type="datetime-local" class="form-control" id="editStartDate" value="2022-12-15T18:00">
+                        <input type="datetime-local" class="form-control" id="editStartDate" value="2024-01-14T09:00">
                     </div>
 
                     <div class="mb-3 col-md-6">
                         <label for="editEndDate" class="form-label">End Date & Time</label>
-                        <input type="datetime-local" class="form-control" id="editEndDate" value="2022-12-15T22:00">
+                        <input type="datetime-local" class="form-control" id="editEndDate" value="2024-01-14T17:00">
                     </div>
 
                     <div class="mb-3 col-12">
@@ -314,7 +325,47 @@
                         <textarea class="form-control" id="editDescription" rows="3">A night of celebration and joy</textarea>
                     </div>
 
-                    <div class="col-12">
+                    <div class="mb-3 col-12">
+                        <label for="editAssignedOfficers" class="form-label">Assigned Officers</label>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="editAssignedOfficersDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Officers
+                            </button>
+                            <div class="dropdown-menu scrollable-menu" aria-labelledby="editAssignedOfficersDropdown">
+                                <!-- Add more officers as needed -->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Officer1" id="editOfficer1Checkbox">
+                                    <label class="form-check-label" for="editOfficer1Checkbox">
+                                        James Smith
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Officer2" id="editOfficer2Checkbox">
+                                    <label class="form-check-label" for="editOfficer2Checkbox">
+                                        Officer One
+                                    </label>
+                                </div>
+                                <!-- Add more officers as needed -->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Officer1" id="editOfficer1Checkbox">
+                                    <label class="form-check-label" for="editOfficer1Checkbox">
+                                        Officer Two
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Officer2" id="editOfficer2Checkbox">
+                                    <label class="form-check-label" for="editOfficer2Checkbox">
+                                        Officer Three
+                                    </label>
+                                </div>
+                                <!-- Add more checkboxes for officers as needed -->
+                                <!-- ... -->
+                                <!-- Add more checkboxes for officers as needed -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 col-12 text-end">
                         <button type="submit" class="btn btn-primary">Save Changes</button>
                     </div>
                 </form>

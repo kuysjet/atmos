@@ -4,9 +4,9 @@
 <div class="wrapper">
 
   <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
+  <!-- <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="dist/img/amalogo.png" alt="ACLC LOGO" height="130" width="100">
-  </div>
+  </div> -->
 
   <?php include "includes/navbar-sidebar.php" ?>
 
@@ -80,7 +80,7 @@
                       <td>3</td>
                       <td>BSCS</td>
                       <td>3</td>
-                      <td>n/a</td>
+                      <td>N/A</td>
                       <td>
                           <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#viewModal">
                               <i class="far fa-eye"></i>
@@ -105,7 +105,7 @@
 
   <!-- Footer -->
   <footer class="main-footer small">
-    <strong>Copyright &copy; atmos 2023</strong> All rights reserved.
+    <strong> &copy; atmos 2023</strong> All rights reserved.
   </footer>
   <!-- /.Footer -->
 </div>

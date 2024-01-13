@@ -19,14 +19,32 @@ session_start();
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <style>
+.animate {
+  background-image: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+-webkit-animation: hue 12s infinite linear;
+}@-webkit-keyframes hue {
+ from {
+   -webkit-filter: hue-rotate(0deg);
+ }
+ to {
+   -webkit-filter: hue-rotate(-360deg);
+ }
+}
+
+
+
+  </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
   <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
+  <!-- <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="dist/img/amalogo.png" alt="ACLC LOGO" height="130" width="100">
-  </div>
+  </div> -->
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-light bg-light">
@@ -53,7 +71,7 @@ session_start();
       <li class="nav-item dropdown no-arrow">
           <a class="nav-link dropdown-toggle align-center" href="#" id="userDropdown" role="button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="d-none d-lg-inline text-gray-600 small">CK Daet</span>
+              <span class="d-none d-lg-inline text-gray-600 small">Officer One</span>
               <img class="img-profile rounded-circle" src="dist/img/user3-128x128.jpg" width="20" height="20">
           </a>
           <!-- Dropdown - User Information -->
@@ -83,8 +101,8 @@ session_start();
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
-      <img src="dist/img/amalogo.png" alt="ACLC Logo" class="brand-image img-circle elevation-3">
-      <span class="brand-text font-weight-light">ACLC College Iriga</span>
+      <img src="dist/img/amalogo.png" alt="ACLC Logo" class="brand-image">
+      <span class="brand-text font-weight-light animate">ACLC College Iriga Inc.</span>
     </a>
 
     <!-- Sidebar -->
@@ -95,7 +113,7 @@ session_start();
           <img src="dist/img/user3-128x128.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="registrar_profile.php" class="d-block">CK Daet</a>
+          <a href="registrar_profile.php" class="d-block">Officer One</a>
         </div>
       </div>
 
@@ -158,7 +176,7 @@ session_start();
               <div class="icon">
                 <i class="fas fa-th-list"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="registrar_scanner.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
         </div>
@@ -193,7 +211,7 @@ session_start();
     </div>
 
   <footer class="main-footer small">
-    <strong>Copyright &copy; 2023 atmos </strong>
+    <strong> &copy; 2024 atmos </strong>
     All rights reserved.
   </footer>
   <!-- Control Sidebar -->

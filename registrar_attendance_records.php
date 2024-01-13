@@ -24,17 +24,35 @@ session_start();
   <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
   <!-- Bootstrap JS and Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+.animate {
+  background-image: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+-webkit-animation: hue 12s infinite linear;
+}@-webkit-keyframes hue {
+ from {
+   -webkit-filter: hue-rotate(0deg);
+ }
+ to {
+   -webkit-filter: hue-rotate(-360deg);
+ }
+}
+
+
+
+  </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
   <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
+  <!-- <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="dist/img/amalogo.png" alt="ACLC LOGO" height="130" width="100">
-  </div>
+  </div> -->
 
     <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-dark navbar-light">
+    <nav class="main-header navbar navbar-expand navbar-light navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item ml-2">
@@ -58,7 +76,7 @@ session_start();
       <li class="nav-item dropdown no-arrow">
           <a class="nav-link dropdown-toggle align-center" href="#" id="userDropdown" role="button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="d-none d-lg-inline text-gray-600 small">Registrar</span>
+              <span class="d-none d-lg-inline text-gray-600 small">Officer One</span>
               <img class="img-profile rounded-circle" src="dist/img/user3-128x128.jpg" width="20" height="20">
           </a>
           <!-- Dropdown - User Information -->
@@ -88,8 +106,8 @@ session_start();
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <div class="brand-link">
-      <img src="dist/img/amalogo.png" alt="ACLC Logo" class="brand-image img-circle elevation-3">
-      <span class="brand-text font-weight-light">ACLC College Iriga Inc.</span>
+      <img src="dist/img/amalogo.png" alt="ACLC Logo" class="brand-image">
+      <span class="brand-text font-weight-light animate"><small>ACLC College Iriga Inc.</small></span>
 </div>
 
     <!-- Sidebar -->
@@ -100,7 +118,7 @@ session_start();
           <img src="dist/img/user3-128x128.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <div class="d-block text-light">Registrar</div>
+          <div class="d-block text-light">Officer One</div>
         </div>
       </div>
 
@@ -159,7 +177,7 @@ session_start();
                     <label for="academicYearFilter" class="form-label">Academic Year:</label>
                     <select id="academicYearFilter" class="form-select" onchange="applyFilters()">
                         <option value=""></option>
-                        <option value="2022-2023">2022-2023</option>
+                        <option value="2022-2023">2023-2024</option>
                         <!-- Add more academic years as needed -->
                     </select>
                 </div>
@@ -217,8 +235,8 @@ session_start();
                     <td>A</td>
                     <td>09375889492</td>
                     <td>San Nicolas, Iriga</td>
-                    <td>Jul 26, 2024 08:00 AM</td>
-                    <td>Jul 26, 2024 05:00 PM</td>
+                    <td>01-14-2024 09:30 AM</td>
+                    <td>01-14-2024 04:30 PM</td>
                 </tr>
                 <!-- Add more rows as needed -->
             </tbody>
@@ -232,7 +250,7 @@ session_start();
 
   <!-- Footer -->
   <footer class="main-footer small">
-    <strong>Copyright &copy; atmos 2023</strong> All rights reserved.
+    <strong> &copy; atmos 2024</strong> All rights reserved.
   </footer>
   <!-- /.Footer -->
 </div>

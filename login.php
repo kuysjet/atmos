@@ -99,11 +99,11 @@ session_start();
                   <h4 class="text-center text-md-center mb-2">Login to get started</h4>
 
                   <div class="form-outline mb-4">
-                        <label class="form-label hidden-label small" for="form2Example11">Username</label>
+                        <label class="form-label hidden-label small" >Username</label>
                         <input type="text" id="username" name="username" class="form-control" placeholder="Enter Username" required />
                   </div>
                   <div class="form-outline mb-4 position-relative">
-                        <label class="form-label hidden-label small" for="form2Example22">Password</label>
+                        <label class="form-label hidden-label small" >Password</label>
                         <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password" required />
                         <i class="fas fa-eye-slash password-toggle-icon mt-3" onclick="togglePassword('password')"></i>
                   </div>

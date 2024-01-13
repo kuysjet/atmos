@@ -4,9 +4,9 @@
 <div class="wrapper">
 
   <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
+  <!-- <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="dist/img/amalogo.png" alt="ACLC LOGO" height="130" width="100">
-  </div>
+  </div> -->
 
   <?php include "includes/navbar-sidebar.php" ?>
 
@@ -64,7 +64,7 @@
 
   <!-- Footer -->
   <footer class="main-footer small">
-    <strong>Copyright &copy; atmos 2023</strong> All rights reserved.
+    <strong> &copy; atmos 2023</strong> All rights reserved.
   </footer>
   <!-- /.Footer -->
 </div>
@@ -151,7 +151,7 @@
                     <form>
                         <div class="mb-3">
                             <label for="editAcademicYear" class="form-label">Academic Year</label>
-                            <input type="text" class="form-control" id="editAcademicYear" placeholder="Enter academic year" value="2022-2023">
+                            <input type="text" class="form-control" id="editAcademicYear" placeholder="Enter academic year" value="2023-2024">
                         </div>
 
                         <div class="mb-3">

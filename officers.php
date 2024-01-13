@@ -4,9 +4,9 @@
 <div class="wrapper">
 
   <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
+  <!-- <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="dist/img/amalogo.png" alt="ACLC LOGO" height="130" width="100">
-  </div>
+  </div> -->
 
   <?php include "includes/navbar-sidebar.php" ?>
 
@@ -17,7 +17,7 @@
     <div class="main p-3">
       <div id="content" class="container">
         <!-- Your page content goes here -->
-        <h2>Officer</h2>
+        <h2>Officers</h2>
           <div class="card header card-outline card-primary m-0 p-3">
             <!-- Add button with icon -->
             <div class="d-flex justify-content-end mb-0 ">
@@ -44,11 +44,11 @@
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>John</td>
-                        <td>Doe</td>
+                        <td>James</td>
+                        <td>Smith</td>
                         <td>Senator</td>
-                        <td class="d-none">johndoe</td>
-                        <td class="d-none">johndoe123</td>
+                        <td class="d-none">jamessmith</td>
+                        <td class="d-none">jamessmith123</td>
                         <td><span class="badge bg-primary">Active</span></td>
                         <td>
                             <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#viewModal">
@@ -74,7 +74,7 @@
 
   <!-- Footer -->
   <footer class="main-footer small">
-    <strong>Copyright &copy; atmos 2023</strong> All rights reserved.
+    <strong> &copy; atmos 2023</strong> All rights reserved.
   </footer>
   <!-- /.Footer -->
 </div>
@@ -189,14 +189,14 @@
                     <div class="mb-3 row">
                         <label for="viewFirstName" class="col-sm-3 col-form-label">First Name</label>
                         <div class="col-sm-9">
-                            <input type="text" readonly class="form-control-plaintext" id="viewFirstName" value="John">
+                            <input type="text" readonly class="form-control-plaintext" id="viewFirstName" value="James">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="viewLastName" class="col-sm-3 col-form-label">Last Name</label>
                         <div class="col-sm-9">
-                            <input type="text" readonly class="form-control-plaintext" id="viewLastName" value="Doe">
+                            <input type="text" readonly class="form-control-plaintext" id="viewLastName" value="Smith">
                         </div>
                     </div>
 
@@ -210,14 +210,14 @@
                     <div class="mb-3 row">
                         <label for="viewUsername" class="col-sm-3 col-form-label">Username</label>
                         <div class="col-sm-9">
-                            <input type="text" readonly class="form-control-plaintext" id="viewUsername" value="johndoe">
+                            <input type="text" readonly class="form-control-plaintext" id="viewUsername" value="jamessmith">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="viewPassword" class="col-sm-3 col-form-label">Password</label>
                         <div class="col-sm-9">
-                            <input type="text" readonly class="form-control-plaintext" id="viewPassword" value="johndoe123">
+                            <input type="text" readonly class="form-control-plaintext" id="viewPassword" value="jamessmith123">
                         </div>
                     </div>
                     <!-- Add more form fields as needed -->
@@ -240,12 +240,12 @@
                     <form>
                         <div class="mb-3">
                             <label for="editFirstName" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="editFirstName" placeholder="Enter first name" value="John">
+                            <input type="text" class="form-control" id="editFirstName" placeholder="Enter first name" value="James">
                         </div>
 
                         <div class="mb-3">
                             <label for="editLastName" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="editLastName" placeholder="Enter last name" value="Doe">
+                            <input type="text" class="form-control" id="editLastName" placeholder="Enter last name" value="Smith">
                         </div>
 
                         <div class="mb-3">
@@ -255,12 +255,12 @@
 
                         <div class="mb-3">
                             <label for="editUsername" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="editUsername" placeholder="Enter username" value="johndoe">
+                            <input type="text" class="form-control" id="editUsername" placeholder="Enter username" value="jamessmith">
                         </div>
 
                         <div class="mb-3">
                             <label for="editPassword" class="form-label">Password</label>
-                            <input type="text" class="form-control" id="editPassword" placeholder="Enter new password">
+                            <input type="text" class="form-control" id="editPassword" placeholder="jamessmith">
                         </div>
 
                         <div class="mb-3">

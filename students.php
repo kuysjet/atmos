@@ -4,9 +4,9 @@
 <div class="wrapper">
 
   <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
+  <!-- <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="dist/img/amalogo.png" alt="ACLC LOGO" height="130" width="100">
-  </div>
+  </div> -->
 
   <?php include "includes/navbar-sidebar.php" ?>
 
@@ -21,11 +21,18 @@
 
           <div class="card header card-outline card-primary m-0 p-3">
             <!-- Add button with icon -->
-            <div class="d-flex justify-content-end mb-0 ">
-              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addStudentModal">
+            <div class="d-flex justify-content-end mb-0">
+            <!-- Excel Upload button -->
+            <button type="button" class="btn btn-info mr-2 text-white" data-bs-toggle="modal" data-bs-target="#importExcelModal">
+                <i class="fas fa-file-excel"></i> Excel Upload
+            </button>
+
+            <!-- Add Student button -->
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addStudentModal">
                 <i class="fas fa-plus"></i> Add Student
-              </button>
-            </div>
+            </button>
+        </div>
+
           </div>
           <div class="card body p-3">
           <div class="table-responsive">
@@ -81,7 +88,7 @@
 
   <!-- Footer -->
   <footer class="main-footer small">
-    <strong>Copyright &copy; atmos 2023</strong> All rights reserved.
+    <strong> &copy; atmos 2023</strong> All rights reserved.
   </footer>
   <!-- /.Footer -->
 </div>
@@ -348,12 +355,21 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <!-- Your import Excel form goes here -->
-                <!-- Include the form elements and script for handling Excel import -->
+                <form>
+                    <div class="mb-3">
+                        <label for="excelFile" class="form-label">Choose Excel File</label>
+                        <input type="file" class="form-control" id="excelFile" accept=".xlsx, .xls" required>
+                    </div>
+                    <!-- Add additional form elements as needed -->
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Upload Excel</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
+
 
 </body>
 </html>
