@@ -130,7 +130,8 @@
 
                                             </td>
                                         </tr>
-                                    <?php } ?>
+                                        <?php $no++;
+                                    } ?>
                                     <!-- Add more rows as needed -->
                                 </tbody>
                             </table>
