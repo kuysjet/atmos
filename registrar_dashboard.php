@@ -187,7 +187,7 @@ session_start();
             <!-- small box -->
             <div class="small-box bg-primary">
               <div class="inner">
-                <h3>+</h3>
+                <p>On Going</p>
 
                 <h5>Acquaintance Party</h5>
               </div>

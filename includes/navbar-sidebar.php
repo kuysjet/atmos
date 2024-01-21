@@ -92,10 +92,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="events.php" class="nav-link <?= $page == 'events.php' ? 'active text-white' : '' ?>">
-                        <i class="nav-icon fas fa-th-list"></i>
+                    <a href="courses.php" class="nav-link <?= $page == 'courses.php' ? 'active text-white' : '' ?>">
+                        <i class="nav-icon fas fa-graduation-cap"></i>
                         <p>
-                            Events
+                            Courses
                         </p>
                     </a>
                 </li>
@@ -108,14 +108,6 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="courses.php" class="nav-link <?= $page == 'courses.php' ? 'active text-white' : '' ?>">
-                        <i class="nav-icon fas fa-graduation-cap"></i>
-                        <p>
-                            Courses
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a href="officers.php" class="nav-link <?= $page == 'officers.php' ? 'active text-white' : '' ?>">
                         <i class="nav-icon fas fa-user-friends"></i>
                         <p>
@@ -123,6 +115,15 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="events.php" class="nav-link <?= $page == 'events.php' ? 'active text-white' : '' ?>">
+                        <i class="nav-icon fas fa-th-list"></i>
+                        <p>
+                            Events
+                        </p>
+                    </a>
+                </li>
+                
                 <li class="nav-item">
                     <a href="attendance_reports.php"
                         class="nav-link <?= $page == 'attendance_reports.php' ? 'active text-white' : '' ?>">

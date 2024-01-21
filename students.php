@@ -249,6 +249,14 @@
                         <input type="text" class="form-control" id="viewContactNumber" readonly value="09746435778">
                     </div>
                     <div class="mb-3 col-md-6">
+                        <label for="viewSection" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="viewSection" readonly value="Student_Username">
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label for="viewContactNumber" class="form-label">Password</label>
+                        <input type="text" class="form-control" id="viewContactNumber" readonly value="Password">
+                    </div>
+                    <div class="mb-3 col-md-6">
                         <label for="viewAddress" class="form-label">Address</label>
                         <input type="text" class="form-control" id="viewAddress" readonly value="San Miguel Iriga City">
                     </div>

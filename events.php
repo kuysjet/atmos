@@ -179,26 +179,26 @@
                             </button>
                             <div class="dropdown-menu scrollable-menu" aria-labelledby="assignedOfficersDropdown">
                                 <!-- Add more officers as needed -->
-                                <div class="form-check">
+                                <div class="form-check ml-3">
                                     <input class="form-check-input" type="checkbox" value="Officer1" id="officer1Checkbox">
                                     <label class="form-check-label" for="officer1Checkbox">
                                         James Smith
                                     </label>
                                 </div>
-                                <div class="form-check">
+                                <div class="form-check ml-3">
                                     <input class="form-check-input" type="checkbox" value="Officer2" id="officer2Checkbox">
                                     <label class="form-check-label" for="officer2Checkbox">
                                         Officer One
                                     </label>
                                 </div>
                                 <!-- Add more officers as needed -->
-                                <div class="form-check">
+                                <div class="form-check ml-3">
                                     <input class="form-check-input" type="checkbox" value="Officer1" id="officer1Checkbox">
                                     <label class="form-check-label" for="officer1Checkbox">
                                         Officer Two
                                     </label>
                                 </div>
-                                <div class="form-check">
+                                <div class="form-check ml-3">
                                     <input class="form-check-input" type="checkbox" value="Officer2" id="officer2Checkbox">
                                     <label class="form-check-label" for="officer2Checkbox">
                                         Officer Three
@@ -333,26 +333,26 @@
                             </button>
                             <div class="dropdown-menu scrollable-menu" aria-labelledby="editAssignedOfficersDropdown">
                                 <!-- Add more officers as needed -->
-                                <div class="form-check">
+                                <div class="form-check ml-3">
                                     <input class="form-check-input" type="checkbox" value="Officer1" id="editOfficer1Checkbox">
                                     <label class="form-check-label" for="editOfficer1Checkbox">
                                         James Smith
                                     </label>
                                 </div>
-                                <div class="form-check">
+                                <div class="form-check ml-3">
                                     <input class="form-check-input" type="checkbox" value="Officer2" id="editOfficer2Checkbox">
                                     <label class="form-check-label" for="editOfficer2Checkbox">
                                         Officer One
                                     </label>
                                 </div>
                                 <!-- Add more officers as needed -->
-                                <div class="form-check">
+                                <div class="form-check ml-3">
                                     <input class="form-check-input" type="checkbox" value="Officer1" id="editOfficer1Checkbox">
                                     <label class="form-check-label" for="editOfficer1Checkbox">
                                         Officer Two
                                     </label>
                                 </div>
-                                <div class="form-check">
+                                <div class="form-check ml-3">
                                     <input class="form-check-input" type="checkbox" value="Officer2" id="editOfficer2Checkbox">
                                     <label class="form-check-label" for="editOfficer2Checkbox">
                                         Officer Three
