@@ -47,16 +47,16 @@
                                                 <?= $getrow['year'] ?>
                                             </td>
                                             <td>
-                                                <?php if ($getrow['status'] == 0) {
+                                                <?php if ($getrow['status'] === '0') {
                                                     echo "<button type='button' class='border-0 bg-transparent' data-bs-toggle='modal'
-                                                    data-bs-target='#confirmChangeStatus" . $getrow['status'] . "'>
+                                                    data-bs-target='#confirmChangeStatus" . $getrow['id'] . "'>
                                                     <span class='badge bg-danger'>
                                                         Pending
                                                     </span>
                                                     </button>";
-                                                } elseif ($getrow['status'] == 1) {
+                                                } elseif ($getrow['status'] === '1') {
                                                     echo "<button type='button' class='border-0 bg-transparent' data-bs-toggle='modal'
-                                                    data-bs-target='#confirmChangeStatus" . $getrow['status'] . "'>
+                                                    data-bs-target='#confirmChangeStatus" . $getrow['id'] . "'>
                                                     <span class='badge bg-primary'>
                                                         Active
                                                     </span>
@@ -64,12 +64,12 @@
                                                 }
                                                 ?>
 
-                                                <div class="modal fade" id="confirmChangeStatus<?= $getrow['status'] ?>"
+                                                <div class="modal fade" id="confirmChangeStatus<?= $getrow['id'] ?>"
                                                     data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
                                                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                                     <div class="modal-dialog">
                                                         <div class="modal-content">
-                                                            <form action="academic_year-status.php" method="post">
+                                                            <form action="aacrud.php" method="post">
                                                                 <div class="modal-header">
                                                                     <h1 class="modal-title fs-5" id="staticBackdropLabel">
                                                                         Confirm Changes
@@ -88,7 +88,7 @@
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-secondary"
                                                                         data-bs-dismiss="modal">CANCEL</button>
-                                                                    <button type="submit"
+                                                                    <button type="submit" name="update-status"
                                                                         class="btn btn-primary">CONFIRM</button>
                                                                 </div>
                                                             </form>
@@ -201,7 +201,7 @@
                 </div>
                 <div class="modal-body">
                     <!-- Add your form or input fields for adding academic year here -->
-                    <form action="academic_year-add.php" method="post">
+                    <form action="aacrud.php" method="post">
                         <!-- Example input field -->
                         <select id="academicYearSelect" class="form-select mb-3" name="academicYear"
                             aria-label="Default select example">
@@ -219,7 +219,8 @@
                         <!-- Add more input fields as needed -->
 
                         <!-- Add submit button -->
-                        <button id="submitButton" type="submit" class="btn btn-primary" disabled>Add Academic
+                        <button id="submitButton" name="year-add" type="submit" class="btn btn-primary" disabled>Add
+                            Academic
                             Year</button>
                     </form>
                 </div>
@@ -267,7 +268,7 @@
 
 <script>
     function deleteme(delid) {
-        window.location.href = 'academic_year-del.php?del=' + delid + '';
+        window.location.href = 'aacrud.php?del=' + delid + '';
         return true;
     }
 
