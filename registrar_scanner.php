@@ -100,7 +100,6 @@
         <table id="resultTable" class="table mt-3">
           <thead>
             <tr>
-              <th>#</th> <!-- Added ID column -->
               <th>QR Code Results</th>
               <th>Time In</th>
               <th>Time Out</th>
@@ -127,8 +126,6 @@
   </div>
 
   <script>
-    var attendeeCount = 0; // Initialize attendee count
-
     var resultTable = $('#resultTable').DataTable({
       dom: 'Bfrtip',
       buttons: [
@@ -136,7 +133,7 @@
         'print',
       ],
       pageLength: 5, // Display 5 rows per page
-      order: [[0, 'desc']], // Optional: if you have a timestamp or sequence column, order by it in descending order
+      order: [[1, 'desc']], // Optional: if you have a timestamp or sequence column, order by it in descending order
     });
 
     var lastScanTime = 0; // Timestamp of the last successful scan
@@ -153,17 +150,13 @@
   var currentTime = new Date().toLocaleTimeString();
   var timeOption = $('#timeOption').val();
 
-  // Increment attendee count
-  attendeeCount++;
-
-  var qrCodeExists = resultTable.data().toArray().some(row => row[1] === qrCodeMessage);
-  var rowIndex = resultTable.data().toArray().findIndex(row => row[1] === qrCodeMessage);
+  var qrCodeExists = resultTable.data().toArray().some(row => row[0] === qrCodeMessage);
+  var rowIndex = resultTable.data().toArray().findIndex(row => row[0] === qrCodeMessage);
 
   if(timeOption === "timeIn") {
     if (!qrCodeExists) {
       // Add new record with Time In
       resultTable.row.add([
-        attendeeCount, // ID
         qrCodeMessage,
         currentTime, // Time In
         '', // Time Out initially empty
@@ -288,7 +281,7 @@ $('#resultTable').on('click', '.delete-btn', function () {
             title: 'Deleted!',
             text: 'The QR code has been deleted.',
             icon: 'success',
-            timer: 2000,
+            timer: 2500,
             showConfirmButton: false
         });
     }
