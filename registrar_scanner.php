@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QR Code Reader</title>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
@@ -55,21 +56,17 @@
             width: 100%;
         }
 
-        #resultTable th, #resultTable td {
-            border: 1px solid #ddd; /* Add a border to table cells */
-            padding: 8px; /* Add some padding to cells */
-            text-align: left; /* Align text to the left within cells */
-        }
+    #resultTable th, #resultTable td {
+        border: 1px solid #ddd; /* Add a border to table cells */
+        padding: 8px; /* Add some padding to cells */
+        text-align: left; /* Align text to the left within cells */
+    }
 
-        #torchButton {
-            margin-top: 10px;
-            padding: 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    .table-responsive {
+      overflow-x: auto;
+    }
+
+      
   </style>
 </head>
 <body>
@@ -97,17 +94,19 @@
       <audio id="errorSound" src="audio/error_sound.mp3" preload="auto"></audio>
       <div class="col-md-6 col-sm-12">
         <h4>Scan Result</h4>
-        <table id="resultTable" class="table mt-3">
-          <thead>
-            <tr>
-              <th>QR Code Results</th>
-              <th>Time In</th>
-              <th>Time Out</th>
-              <th>Action</th> <!-- Added column for Delete button -->
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
+        <div class="table-responsive">
+          <table id="resultTable" class="table mt-3">
+            <thead>
+              <tr>
+                <th>QR Code Results</th>
+                <th>Time In</th>
+                <th>Time Out</th>
+                <th>Action</th> <!-- Added column for Delete button -->
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
       </div>
     </div>
 
@@ -290,7 +289,6 @@ $('#resultTable').on('click', '.delete-btn', function () {
 
 
   </script>
-
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
