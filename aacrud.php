@@ -24,6 +24,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: academic_year.php");
         }
     }
+    // courses.php add
+    if (isset($_POST['add-courses'])) {
+        $course  = mysqli_real_escape_string($conn, $_POST['course']);
+        $level   = mysqli_real_escape_string($conn, $_POST['level']);
+        $section = mysqli_real_escape_string($conn, $_POST['section']);
+
+        // Insert the user's input into the database
+        $sql = "INSERT INTO courses (course, course_code, level, section) VALUES ('$course', '$course', '$level', '$section')";
+
+        if ($conn->query($sql) === TRUE) {
+            header("Location: courses.php");
+        }
+    }
+    // course.php edit
+    if (isset($_POST['submit-edit-course'])) {
+        $id           = mysqli_real_escape_string($conn, $_POST['course_id']);
+        $edit_course  = mysqli_real_escape_string($conn, $_POST['edit-course']);
+        $edit_level   = mysqli_real_escape_string($conn, $_POST['edit-level']);
+        $edit_section = mysqli_real_escape_string($conn, $_POST['edit-section']);
+
+        // Insert the user's input into the database
+        $sql = "UPDATE courses SET course = '$edit_course', course_code = '$edit_course', level = '$edit_level', section = '$edit_section' WHERE id = $id";
+
+        if ($conn->query($sql) === TRUE) {
+            header("Location: courses.php");
+        }
+    }
 
 }
 
@@ -37,6 +64,17 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
         if ($conn->query($sql) === TRUE) {
             header("Location: academic_year.php");
+        }
+    }
+    // courses delete
+    if (isset($_GET['del-course'])) {
+
+        $del = $_GET['del-course'];
+
+        $sql = "DELETE FROM courses WHERE id = '$del' ";
+
+        if ($conn->query($sql) === TRUE) {
+            header("Location: courses.php");
         }
     }
 
